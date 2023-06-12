@@ -12,12 +12,14 @@
   "dependencies": {
     "body-parser": "^1.20.0",
     "colord": "^2.9.2",
+    "cors": "^2.8.5",
     "corser": "^2.0.1",
     "express": "^4.17.3",
     "helmet": "^4.6.0",
     "mathjax-full": "^3.2.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
     "@types/memory-cache": "^0.2.2",

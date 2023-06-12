@@ -2,11 +2,12 @@ import express from "express";
 import { urlencoded } from "body-parser";
 import helmet from "helmet";
 import { tex2svg } from "./adaptor";
-
+import cors from "cors";
 const app = express();
 
 app.use(helmet());
 app.use(urlencoded({ extended: false }));
+app.use(cors({ origin: "*" }));
 
 app.get("*", async function (req, res, next) {
   const mode = Object.keys(req.query).includes("from")
