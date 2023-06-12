@@ -7,7 +7,6 @@ const app = express();
 
 app.use(helmet());
 app.use(urlencoded({ extended: false }));
-// allow only from https://plugins.amplenote.com and https://amplenote.com
 app.use(cors({ origin: "https://plugins.amplenote.com" }));
 
 app.get("*", async function (req, res, next) {
