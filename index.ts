@@ -7,7 +7,7 @@ const app = express();
 
 app.use(helmet());
 app.use(urlencoded({ extended: false }));
-app.use(cors({ origin: "https://plugins.amplenote.com" }));
+app.use(cors({ origin: "https://*.amplenote.com" }));
 
 app.get("*", async function (req, res, next) {
   const mode = Object.keys(req.query).includes("from")
