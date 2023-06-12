@@ -8,7 +8,7 @@ const app = express();
 app.use(helmet());
 app.use(urlencoded({ extended: false }));
 // allow only from https://plugins.amplenote.com and https://amplenote.com
-app.use(cors({ origin: ["https://*.amplenote.com", "http://*.amplenote.com", "https://amplenote.com"] }));
+app.use(cors({ origin: ["https://plugins.amplenote.com", "http://plugins.amplenote.com", "http://amplenote.com", "https://amplenote.com"] }));
 
 app.get("*", async function (req, res, next) {
   const mode = Object.keys(req.query).includes("from")
